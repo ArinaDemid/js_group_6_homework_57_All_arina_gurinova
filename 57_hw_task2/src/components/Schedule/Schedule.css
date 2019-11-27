@@ -1,0 +1,50 @@
+.Schedule-line {
+    width: 405px;
+    height: 30px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.Schedule-line .entertainment {
+    background: rgb(132, 231, 129);
+    height: 30px;
+}
+
+.Schedule-line .car {
+    background: rgb(129, 173, 231);
+    height: 30px;
+}
+
+.Schedule-line .food {
+    background: rgb(231, 132, 129);
+    height: 30px;
+}
+
+.ScheduleDescription-block .entertainment, .ScheduleDescription-block .car, .ScheduleDescription-block .food {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.ScheduleDescription-block .entertainment p.entertainment{
+    width: 30px;
+    height: 30px;
+    background: rgb(132, 231, 129);
+}
+
+.ScheduleDescription-block .car p.car{
+    width: 30px;
+    height: 30px;
+    background: rgb(129, 173, 231);
+}
+
+.ScheduleDescription-block .food p.food{
+    width: 30px;
+    height: 30px;
+    background: rgb(231, 132, 129);
+}
+.ScheduleDescription {
+    margin: 20px 0 0 10px;
+}

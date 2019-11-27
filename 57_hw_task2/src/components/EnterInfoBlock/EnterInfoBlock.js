@@ -9,6 +9,7 @@ const EnterInfoBlock = props => {
                 <input name="cost" required className="EnterInfoBlock-cost" placeholder="Cost" type="number" onChange={props.change} value={props.cost}/>
                 <p className="EnterInfoBlock-currency">KGZ</p>
                 <button className="EnterInfoBlock-add" type="submit">Add</button>
+                
             </form>
         </div>
     )
