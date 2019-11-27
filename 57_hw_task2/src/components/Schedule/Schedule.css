@@ -1,4 +1,4 @@
-.Schedule-line {
+.ScheduleLine {
     width: 405px;
     height: 30px;
     margin-top: 20px;
@@ -7,17 +7,17 @@
     flex-direction: row;
 }
 
-.Schedule-line .entertainment {
+.ScheduleLine-entertainment {
     background: rgb(132, 231, 129);
     height: 30px;
 }
 
-.Schedule-line .car {
+.ScheduleLine-car {
     background: rgb(129, 173, 231);
     height: 30px;
 }
 
-.Schedule-line .food {
+.ScheduleLine-food {
     background: rgb(231, 132, 129);
     height: 30px;
 }
