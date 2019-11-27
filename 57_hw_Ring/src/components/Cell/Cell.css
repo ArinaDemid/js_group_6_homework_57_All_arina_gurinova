@@ -1,0 +1,29 @@
+
+.Cell-grey {
+    width: 50px;
+    height: 50px;
+    background: grey;
+    float: right;
+    margin: 1px;
+}
+
+.Cell-white {
+    width: 50px;
+    height: 50px;
+    background: white;
+    float: right;
+    margin: 1px;
+}
+
+.Cell-ring {
+    width: 50px;
+    height: 50px;
+    background: url(../RingImage/Ring.png);
+    float: right;
+    margin: 1px;
+}
+
+.Cells-box {
+    width: 320px;
+    height: 320px;
+}

@@ -1,0 +1,26 @@
+.EnterInfoBlock {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.EnterInfoBlock-name{
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.EnterInfoBlock-cost {
+    padding: 5px;
+    margin-right: 5px;
+    width: 60px;
+}
+
+.EnterInfoBlock-currency {
+    margin: 5px 5px 0 0;
+}
+
+.EnterInfoBlock-add {
+    padding: 5px 10px;
+    background: rgb(184, 122, 184);
+    border: none;
+}
