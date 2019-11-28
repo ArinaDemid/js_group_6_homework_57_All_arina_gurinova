@@ -1,17 +1,17 @@
 .ListItemsBlock {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .ListItemsBlock-remove {
-    background: transparent;
-    border: none;
+  background: transparent;
+  border: none;
 }
 
 .ListItemsBlocks {
-    border: 1px solid rgb(64, 36, 100);
-    margin-top: 10px;
-    width: 400px;
-    background: rgb(246, 241, 248);
+  border: 1px solid rgb(64, 36, 100);
+  margin-top: 10px;
+  width: 400px;
+  background: rgb(246, 241, 248);
 }
