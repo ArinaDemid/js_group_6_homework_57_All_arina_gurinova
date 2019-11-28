@@ -34,20 +34,13 @@ class AllTaskBlock extends Component {
       
       const tasks = [...this.state.tasks];
       tasks.push(taskNew);
-      
-      const categoriesEnter = tasks.filter(task => task.selector === 'Entertainment')
-      .reduce((sum, cur) => sum + parseInt(cur.cost), 0);
-      
-      const categoriesCar = tasks.filter(task => task.selector === 'Car')
-      .reduce((sum, cur) => sum + parseInt(cur.cost), 0);
-      
-      const categoriesFood = tasks.filter(task => task.selector === 'Food')
-      .reduce((sum, cur) => sum + parseInt(cur.cost), 0);
-      
+
       let categories = {...this.state.categories};
-      categories['Entertainment'] = categoriesEnter;
-      categories['Car'] = categoriesCar;
-      categories['Food'] = categoriesFood;
+
+      tasks.map(item => {
+        return categories[item.selector] = tasks.filter(task => task.selector === item.selector)
+          .reduce((sum, cur) => sum + parseInt(cur.cost), 0);
+      });
       
       this.setState({tasks, taskNew: {id: nanoid(), name: '', cost: ''}, totalSpend, selectedOption: null, categories});
     }
@@ -65,20 +58,14 @@ class AllTaskBlock extends Component {
       tasks.splice(index, 1);
       let totalSpend = this.state.totalSpend;
       totalSpend -= this.state.tasks[index].cost;
-      
-      const categoriesEnter = tasks.filter(task => task.selector === 'Entertainment')
-      .reduce((sum, cur) => sum + parseInt(cur.cost), 0);
-      
-      const categoriesCar = tasks.filter(task => task.selector === 'Car')
-      .reduce((sum, cur) => sum + parseInt(cur.cost), 0);
-      
-      const categoriesFood = tasks.filter(task => task.selector === 'Food')
-      .reduce((sum, cur) => sum + parseInt(cur.cost), 0);
-      
+
       let categories = {...this.state.categories};
-      categories['Entertainment'] = categoriesEnter;
-      categories['Car'] = categoriesCar;
-      categories['Food'] = categoriesFood;
+      categories = {};
+
+      tasks.map(item => {
+        return categories[item.selector] = tasks.filter(task => task.selector === item.selector)
+          .reduce((sum, cur) => sum + parseInt(cur.cost), 0);
+      });
       
       this.setState({tasks, totalSpend, categories});
     };
@@ -116,13 +103,13 @@ class AllTaskBlock extends Component {
               })
             }
             <TotalSpend
-                total={this.state.totalSpend}
+              total={this.state.totalSpend}
             />
           </div>
           <Schedule
-            entertainment={this.state.categories['Entertainment']}
-            car={this.state.categories['Car']}
-            food={this.state.categories['Food']}
+            entertainment={this.state.categories['Entertainment'] ? this.state.categories['Entertainment']: 0}
+            car={this.state.categories['Car'] ? this.state.categories['Car']: 0}
+            food={this.state.categories['Food'] ? this.state.categories['Food']: 0}
             total={this.state.totalSpend}
           />
         </div>
